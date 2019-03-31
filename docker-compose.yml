@@ -1,0 +1,11 @@
+version: '2'
+
+services:
+  ros2dev:
+    image: ae/ros:ros2_dev
+    build: .
+    privileged: true
+    container_name: ros2dev
+    volumes: 
+      - ./ros2_ws:/home/dev/ros2_ws
+    

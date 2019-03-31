@@ -1,0 +1,19 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "start ros2 env",
+            "type": "shell",
+            "command": "docker-compose -f docker-compose.yml run --service-ports --name ros2dev ros2dev",
+            "problemMatcher": []
+        },
+        {
+            "label": "stop ros2 env",
+            "type": "shell",
+            "command": "docker-compose -f docker-compose.yml down",
+            "problemMatcher": []
+        }
+    ]
+}
